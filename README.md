@@ -1,4 +1,4 @@
-# Sarcasm-detection-in-plain-text-using-tensorflow
+# Sarcasm detection using tensorflow
 A deep learning model to detect sarcasm in plain text.
 
 Dependencies:
