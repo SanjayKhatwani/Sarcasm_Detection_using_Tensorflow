@@ -12,6 +12,7 @@ import create_feature_sets
 import tensorflow as tf
 import os
 
+
 # Build the structure of the neural network exactly same as the
 # train_and_test.py, so that the input features can be run through the neural
 #  network.
@@ -85,7 +86,7 @@ def use_neural_network(input_data):
     prediction = neural_network_model(x)
 
     with tf.Session() as sess:
-        sess.run(tf.initialize_all_variables())
+    sess.run(tf.global_variables_initializer())
         saver.restore(sess, os.path.join(os.getcwd(),
                                          'model\sarcasm_model.ckpt'))
         features = create_feature_sets.extractFeatureOfASentence(input_data)
